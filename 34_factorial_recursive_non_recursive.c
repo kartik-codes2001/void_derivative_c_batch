@@ -1,6 +1,7 @@
 #include<stdio.h>
 
 int FactorialRecarsive(int);
+int FactorialNonRecarsive(int);
 
 int main(void)
 {
@@ -11,11 +12,11 @@ printf("Enter Number: \t");
 scanf("%d",&iNo);
 
 iAns = FactorialRecarsive(iNo);
-printf("Factorial of %d is %d\n",iNo,iAns);
+printf("Factorial (Recursive) of %d is %d\n",iNo,iAns);
 
 
 iAns = FactorialRecarsive(iNo);
-printf("Factorial of %d is %d\n",iNo,iAns);
+printf("Factorial (NonRecursive) of %d is %d\n",iNo,iAns);
 
 return 0;
 }
@@ -27,7 +28,7 @@ int FactorialRecarsive(int iNo)
 
   return iNo * FactorialRecarsive(iNo - 1);
 }
-int FactorialRecursive(int iNo)
+int FactorialNonRecursive(int iNo)
 {
   int iAns;
   int iCounter;
@@ -39,7 +40,8 @@ int FactorialRecursive(int iNo)
 }
 
 /*
-Enter Number:   5
-Factorial of 5 is 120
-Factorial of 5 is 120
+Enter Number:  5
+Factorial (Recursive) of 5 is 120
+Factorial (Non-Recursive) of 5 is 120
+
 */
